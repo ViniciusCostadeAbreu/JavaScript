@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            font: normal 18pt arial;
+        }
+
+        h1{
+            text-align: center;
+            margin: 20px 20px;
+        }
+        div#numeros{
+            border: 2px solid black;
+            width: 50vw;
+            margin: auto;
+            padding: 10px;
+        }
+        div#numeros h4{
+            display: inline-block;
+        }
+        div#numeros .texto{
+            display: inline-block;
+            width: 70px;
+            padding: 5px;
+        }
+        div#botoes{
+            padding-top: 30px;
+        }
+        .btn{
+            font-size: 0.7em;
+            width: 85px;
+            height: 40px;
+        }
+        div#res{
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculador</h1>
+    <div id="numeros">
+        <h4 style="display: inline-block;">Primeiro Numero</h4>
+        <input type="number" name="txtn1" id="txtn1" class="texto">
+        <h4 style="display: inline-block;">Segundo Numero</h4>
+        <input type="number" name="txtn2" id="txtn2" class="texto">
+        <div id="botoes">
+            <input type="button" value="Somar" onclick="somar()" class="btn">
+            <input type="button" value="Subtrair" onclick="subtrair()" class="btn">
+            <input type="button" value="Multiplicar" onclick="multi()" class="btn">
+            <input type="button" value="Dividir" onclick="dividir()" class="btn">
+        </div>
+    </div>
+
+    <div id="res"> Resultado Final</div>
+    <script>
+        var tn1 = window.document.getElementById('txtn1')
+        var tn2 = window.document.querySelector('input#txtn2')
+        var res = window.document.getElementById('res')
+
+        function somar(){
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `O resultado da SOMA entre ${n1} e ${n2} é igual a ${s}`
+        }
+        function subtrair(){
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 - n2
+            res.innerHTML = `O resultado da SUBTRAÇÃO entre ${n1} e ${n2} é igual a ${s}`
+        }
+        function multi(){
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 * n2
+            res.innerHTML = `O resultado da MULTIPLICAÇÃO entre ${n1} e ${n2} é igual a ${s}`
+        }
+        function dividir(){
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 / n2
+            res.innerHTML = `O resultado da DIVISÃO entre ${n1} e ${n2} é igual a ${s}`
+        }
+        
+    </script>
+
+
+</body>
+</html>
