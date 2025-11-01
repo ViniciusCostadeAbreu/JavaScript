@@ -18,11 +18,12 @@
         function verificar(){
             var txtp = window.document.getElementById('txtpais')
             var res = window.document.getElementById('res')
-            var p = String(txtp)
-            if (p == 'BRASI') {
+            var p = txtp.value
+            if (p.toUpperCase() === 'BRASIL') {
                 res.innerHTML = 'BRASILEIRO'
             }else{
                 res.innerHTML = 'ESTRANGEIRO'
+                
             }
         }
     </script>
