@@ -13,6 +13,7 @@ function contar(){
     }
     else{
         if(Number(pas.value) == 0){
+            window.alert('Passo 0 Não é valido, considerando passo 1')
             //var c = Number(ini.value) 
             for(var c = Number(ini.value); c < (Number(fim.value) +1); c++){
                 res.innerHTML = res.innerHTML + '👉' + c 
