@@ -1,11 +1,12 @@
 function gerartabuada(){
     var txtnum = document.getElementById('txtnum')
     var select = document.getElementById('ressel')
-    var num = Number(txtnum.value)
+    
 
     if(txtnum.value == ''){
         window.alert('Por favor informe um numero')
     } else{
+        var num = Number(txtnum.value)
         select.innerHTML=''
         for(var c = 1; c <= 10; c++){
             var valor = String(c);
