@@ -26,6 +26,16 @@ function finalizar(){
             res.innerHTML = `Ao todo temos ${select.options.length} numero cadastrado`
         } else {
             res.innerHTML = `Ao todo temos ${select.options.length} numeros cadastrados`
+            const valores = Array.from(select.options).map(option =>  Number(option.value))
+            const maior =  Math.max(...valores)
+            res.innerHTML += `<br><br>O maior valor informado foi ${maior}`
+            const menor = Math.min(...valores)
+            res.innerHTML += `<br><br>O menor valor informado foi ${menor}`
+            let soma = 0
+            for (let option of select.options){
+                soma += Number(option.value)
+            }
+            res.innerHTML += `<br><br>somando todos os valores temos ${soma}`
         }
          
     }
