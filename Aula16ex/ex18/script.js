@@ -1,6 +1,11 @@
 var select = document.getElementById('sel')
 var res = document.getElementById('res')
 
+function opcaoExiste(select, value){
+    return Array.from(select.options)
+    .some(option => option.value === value);
+}
+
 function adicionar(){
     res.innerHTML = ''
     var txtnum = document.getElementById('txtnum')
@@ -39,9 +44,4 @@ function finalizar(){
         }
          
     }
-}
-
-function opcaoExiste(select, value){
-    return Array.from(select.options)
-    .some(option => option.value === value);
 }
