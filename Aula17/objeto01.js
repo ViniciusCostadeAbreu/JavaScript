@@ -7,5 +7,5 @@ let amigo = {
         this.peso += p
     }
 }
-
-console.log(`O ${amigo.nome}, pesa ${engordar(2)}`)
+amigo.engordar(2)
+console.log(`O ${amigo.nome}, pesa ${amigo.peso}Kg`)
