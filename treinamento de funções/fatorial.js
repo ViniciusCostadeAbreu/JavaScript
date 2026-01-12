@@ -8,4 +8,19 @@ function fatorial (n){
     return console.log(cont)
 }
 
-fatorial(5)
+fatorial(0)
+
+//TAMBEM FUNCIONA
+/*
+function fatorial(numero) {
+  // Caso base: quando o número é 0 ou 1
+  if (numero === 0 || numero === 1) {
+    return 1;
+  }
+
+  // A função chama ela mesma
+  return numero * fatorial(numero - 1);
+}
+
+console.log(fatorial(5)); // 120
+*/

@@ -1,6 +1,6 @@
 function temperatura(n){
-    let f = (n*1.8) +32
-    return f
+
+    return (n*1.8) +32
 }
 
 console.log(temperatura(10))
